@@ -1,4 +1,12 @@
-# ecoomerceproject
+❤️ Namaste React 🙏
+Namaste React Live Course from Zero to Hero 🚀 by Akshay Saini Founder of NamasteDev. This repository for Assignment & Class Notes taken during this First Live course.
+💖 This Repository was trending on Github 🔥
+
+🎨 Contents
+
+This repository contains a Collection of Assignments & Class Notes, which help you understand the concepts of React.js.
+
+📚 Chapter 01 - Inception (Date: 08-08-2024)
 
 #what is Emmet ?
 emmet is just just like visual studio to genratre some code
@@ -109,3 +117,6 @@ let data = React.createElement("div", { id: "Parent" }, [
 
 let dumydata = ReactDOM.createRoot(document.getElementById("root"));
 dumydata.render(data);
+
+
+# homework first session Namaste react js
