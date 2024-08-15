@@ -1,15 +1,15 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    font-family: Gilroy, Arial, sans-serif;
-    outline: none;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap');
+/* * {
+    border: 1px solid red;
+    font-family: Roboto;
+} */
 body{
-    background-color: rgba(235, 222, 222, 0.911);
+    font-family: Roboto;
+    margin: 0;
+    /* background-color:#eee; */
+    padding: 0;
 }
+
 .header{
     display: flex;
     padding-left: 125px;
@@ -40,7 +40,13 @@ body{
 }
 .res-logo{
     padding: 5px;
-    width: 100%;
+    width: 96%;
     border-radius: 16px;
     filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+}
+.ratings {
+    display:flex;
+    justify-content:space-between;
+    border-radius:5px;
+    margin-top:1rem;
 }
