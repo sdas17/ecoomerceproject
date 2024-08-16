@@ -46,5 +46,9 @@ why is react is fast bcz react have efficient have dom manpulation
 why use state used 2nd function =>
 as soon call ur resturant react find out div update ui 
 bcz they want trigger update ui using diff alogrithm 
+# reconalition alogirithm is know as (react fiber)
+virtual dom is representive actual dom
+actual dom is mean by <div> target value 
+diff algorihm is mean by comparision btwenn old actual dom to real actual dom
 
 
