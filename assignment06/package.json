@@ -1,0 +1,34 @@
+{
+  "name": "assignment06",
+  "version": "1.0.0",
+  "description": "Explore they worlds",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.htm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdas17/ecoomerceproject.git"
+  },
+  "keywords": [
+    "react",
+    "js",
+    "explore",
+    "worlds"
+  ],
+  "author": "subham kumar das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdas17/ecoomerceproject/issues"
+  },
+  "homepage": "https://github.com/sdas17/ecoomerceproject#readme",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
