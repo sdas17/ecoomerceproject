@@ -2,7 +2,8 @@ Chapter 03 - Laying the Foundation
 
 Topics
 ● JSX
-jsx is just like html like syntx  jsx is stand for javscript xml 
+
+jsx is just like html like syntax jsx is stand for javscript xml 
 
 ● React.createElement vs JSX
 react.createElement is when code wriiten it create object then render html template
@@ -12,11 +13,13 @@ jsx is =>react.cratelement =>object =>html dom render
 2.syntetic sugar
 3.readabilty
 4.less code
+
 ● Behind the Scenes of JSX
+
 JSX => React.createElement => Object => HTMl(DOM)
 ● Babel & parcel role in JSX
 babel  babel type and required bable to transpile it.
-parcel is beast 
+parcel is beast  and parcel is file wathcing alig
 ● Components
 components is only bulidng block component button is component ,card is one component 
 
@@ -32,9 +35,10 @@ JSX is a syntex extensin created by Facebook. It makes us easy to understand the
 
 
 ● Superpowers of JSX
-Easy to maintain
-Secure
-Easy to debug
+1.Easy to maintain
+2.Secure
+3.Easy to debug
+
 ● Role of type attribute in script tag? What options can I use there?
 
 
@@ -78,8 +82,36 @@ e.g.
 Coding Assignment:
 ● Create a Nested header Element using React.createElement(h1,h2,h3 inside a
 div with class “title”)
+
+const title = React.createElement(
+  "h1", 
+  null, 
+  React.createElement(
+    "h2",
+    null, 
+    React.createElement(
+      "h3",
+      { id: 'title' }, 
+      "hello world" 
+    )
+  )
+);
+
+const jsxHeading = <h1 id="heading">Namaste React Using JSX🚀</h1>;
+
 ○ Create the same element using JSX
 ○ Create a functional component of the same with JSX
+const HeadingComponent = () => <h1>Namaste React from Functional Component</h1>;
+const HeadingComponent = () => (
+    <h1 className="heading">
+    Namaste React from Functional Component</h1>
+   );const HeadingComponent = () => {
+//   return (
+//     <div className="container">
+//       <h1>Namaste React from Functional Component</h1>
+//     </div>
+//   );
+// };
 ○ Pass attributes into the tag in JSX
 ○ Composition of Component(Add a component inside another)
 ○ {TitleComponent} vs {<TitleComponent/>} vs

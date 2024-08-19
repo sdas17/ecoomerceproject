@@ -1,6 +1,9 @@
 Chapter 06 - Exploring the world
 ● What is a Microservice?
-A microservice is an unique entity that provides a unique service to an application. It can be a database, a server or a UI of the application. These microservices are connected via APIs to make a complete application and are separated from each other as a different application in itself.
+
+A microservice is an unique entity that provides a unique service to an application. 
+It can be a database, a server or a UI of the application. 
+These microservices are connected via APIs to make a complete application and are separated from each other as a different application in itself.
 
 ● What is Monolith architecture?
 A monolith architecture is a entire application consisting of all the services inside
@@ -26,8 +29,14 @@ Shimmer UI is a great way for loading the applications. Instead of showing a loa
 
 ● What is CORS?
 CORS stands for Cross Origin Resource Sharing , It is a header based machanism that allows a server to indicate any origin other that it's own. We can create requests to other domains or ports to get the data from our browser.
+
 ● What is async and await?
+
 ● What is the use of `const json = await data.json();` in getRestaurants()
+
+
+
+
 Coding Assignment :
 ● Play with the useEffect Hook to see when it is called?(before or after render)
 ● Play with dependency array in useEffect Hook
