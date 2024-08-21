@@ -6,6 +6,7 @@ import {
     SWIGGY_REST_API_PATH,
   } from "../utils/Apicalling";
   import Shimmer from '../component/Shimmer-ui';
+import { Link } from "react-router-dom";
 
 const Body = () => {
     // state Vaible - super Powefull varible
@@ -67,8 +68,8 @@ const Body = () => {
                       
                         {
                             filterdata.map((resturnat)=>
-                                ( <Restcard key={resturnat?.info?.id}
-                                    {...resturnat?.info}></Restcard>)
+                                ( <Link key={resturnat?.info?.id} to={"/resturantMenu/"+ resturnat?.info?.id}><Restcard 
+                                    {...resturnat?.info}></Restcard></Link>)
                         )
                         }
                        
