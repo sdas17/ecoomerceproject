@@ -26,8 +26,8 @@ const Body = () => {
         });
       
         setfilterdata(filterdata);
-        setlistofItem(""); 
-        setRestaurantName(searchRestaurant);
+        // setlistofItem(""); 
+        // setRestaurantName(searchRestaurant);
 
       };
       
@@ -37,6 +37,7 @@ const Body = () => {
         const json = await data.json();
         const restaurants = eval("json?." + SWIGGY_REST_API_PATH) || [];
         setlistOfResturant(restaurants)
+        //when i have fetching data update they data
         setfilterdata(restaurants)
 
       };
@@ -77,6 +78,6 @@ const Body = () => {
 
             </div>
         </>
-    ) } 
+    )} 
 
 export default Body

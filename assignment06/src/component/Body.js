@@ -22,12 +22,14 @@ const Body = () => {
         console.log(listofItem);
       
         let filterdata = listOfResturant.filter((res) => {
-          return res?.info?.name.toLowerCase().includes(listofItem.toLowerCase());
+          return res?.info?.name.includes(listofItem);
         });
+        console.log(filterdata);
+        
       
         setfilterdata(filterdata);
-        setlistofItem(""); 
-        setRestaurantName(searchRestaurant);
+        // setlistofItem(""); 
+        // setRestaurantName(listOfResturant);
 
       };
       
@@ -54,6 +56,7 @@ const Body = () => {
   onChange={(e) => setlistofItem(e.target.value)}
 />
 <button onClick={setdata}>Search item</button>
+<br></br>
 <button className="btn-search" onClick={()=>{
     let restUrantData= filterdata.filter((res)=>res?.info?.avgRating > 4.0);
     console.log(restUrantData);

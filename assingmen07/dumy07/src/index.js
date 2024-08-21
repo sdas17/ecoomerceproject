@@ -9,6 +9,7 @@ import {
 import About from './component/About';
 import Error from '../src/component/Error/Error';
 import Body from './component/Body';
+import ResturantMeny from './component/ResturantMeny';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         element:<About/>
       
       },
+      {
+        path:"/resturantMenu/:resId",
+        element:<ResturantMeny/>
+      }
     ],
     errorElement:<Error/>
    
