@@ -68,6 +68,8 @@ const Body = () => {
                       
                         {
                             filterdata.map((resturnat)=>
+                            
+                                
                                 ( <Link key={resturnat?.info?.id} to={"/resturantMenu/"+ resturnat?.info?.id}><Restcard 
                                     {...resturnat?.info}></Restcard></Link>)
                         )
