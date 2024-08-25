@@ -57,13 +57,13 @@ export const IMG_CDN_URL = `https://media-assets.swiggy.com/swiggy/image/upload/
 export const SWIGGY_REST_API_PATH = `data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants`;
 
 // Social Media Links - URL
-export const LINKEDIN_LINK = "https://www.linkedin.com/in/bharat2044/";
-export const GiTHUB_LINK = "https://github.com/Bharat2044";
+export const LINKEDIN_LINK = "https://www.linkedin.com/in/sdas17/";
+export const GiTHUB_LINK = "https://github.com/sdas17";
 export const TWITTER_LINK = "https://x.com/bharat__2044/";
 export const EMAIL_LINK = "mailto:bharatkumar204451@gmal.com";
 
 // Github - username and repository name
-export const GITHUB_USERNAME = "Bharat2044";
+export const GITHUB_USERNAME = "sdas17";
 export const GITHUB_REPOSITORY_NAME = "Namaste-React";
 
 // Github API for User

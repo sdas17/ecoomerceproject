@@ -197,7 +197,7 @@ export default UserClass;
 //             </button>
 //             <h2>Name: {name}</h2>
 //             <h2>Location: {location}</h2>
-//             <h2>Contact: Bharat2044</h2>
+//             <h2>Contact: sdas17</h2>
 //           </div>
 
 //           <div className="right-profile">
