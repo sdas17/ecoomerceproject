@@ -36,7 +36,7 @@ const Body = () => {
     const fetchData = async () => {
         const data = await fetch(SWIGGY_API_URL);
         const json = await data.json();
-        const restaurants = eval("json?." + SWIGGY_REST_API_PATH) || [];
+        const restaurants = eval("json?." + SWIGGY_REST_API_PATH) ;
         setlistOfResturant(restaurants)
         //when i have fetching data update they data
         setfilterdata(restaurants)

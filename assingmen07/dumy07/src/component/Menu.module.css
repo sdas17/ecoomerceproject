@@ -1,47 +1,110 @@
-/* Menu.module.css */
+.menuContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #ff4c4c;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.restaurantName {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.restaurantDetails {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.menuTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #444;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
 
 .menuBar {
-    list-style-type: none; /* Remove default bullets */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Align items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-    background-color: #fff; /* Background color for the menu */
-    border: 1px solid #ddd; /* Border around the menu */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  
-  .menuItem {
-    padding: 15px 20px; /* Space around each menu item */
-    border-bottom: 1px solid #ddd; /* Bottom border for separation */
-    width: 100%; /* Each item takes full width in the flexbox */
-    display: flex; /* Align name and price horizontally */
-    justify-content: space-between; /* Space between name and price */
-    transition: background-color 0.3s ease; /* Smooth background color change */
-  }
-  
-  .menuItem:last-child {
-    border-bottom: none; /* Remove bottom border for the last item */
-  }
-  
-  .menuItem:hover {
-    background-color: #f0f0f0; /* Highlight background on hover */
-    cursor: pointer; /* Pointer cursor on hover */
-  }
-  
-  .menuItemName {
-    font-weight: bold; /* Bold text for the item name */
-    color: #333; /* Darker color for text */
-  }
-  
-  .menuItemPrice {
-    color: #888; /* Lighter color for the price */
-    font-weight: normal; /* Regular weight for the price */
-  }
-  
-  .menuItemPrice::before {
-    content: "₹"; /* Add rupee symbol before the price */
-    margin-right: 2px; /* Small space between symbol and price */
-  }
-  
+  list-style: none;
+  padding: 0;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.menuItem:hover {
+  transform: scale(1.02);
+}
+
+.menuItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menuItemHeader:hover {
+  background-color: #f0f0f0;
+}
+
+.menuItemName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.menuItemPrice {
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.accordionIcon {
+  font-size: 1.2rem;
+  color: #666;
+  margin-left: 10px;
+}
+
+.menuItemDetails {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  transition: max-height 0.3s ease;
+}
+
+.menuItemDetails p {
+  margin: 0;
+  color: #555;
+}

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlieStatus from "../utils/UseOnlineStatus";
 
 const Header =()=>{
     const [btnNamereact,setBtname]=useState("Login")
     console.log('render');
+    const onlineStatus=useOnlieStatus();
     
     return (
         <>
@@ -13,9 +15,13 @@ const Header =()=>{
             </div>
             <div className='nav-link'>
                 <ul style={{ listStyleType: "none", display: "flex" }}>
+                <li>onlineStatus:{onlineStatus ? "🟢":"🔴"}</li>
                     <li style={{ paddingLeft: '20px' }}>Home</li>
                         <li style={{ paddingLeft: '20px' }}>
                             <Link to="/About">About us</Link>
+                        </li>
+                        <li style={{ paddingLeft: '20px' }}>
+                            <Link to="/grocery">Groceery</Link>
                         </li>
 
                     <li style={{ paddingLeft: '20px' }}>  <Link to="/About">Contact</Link></li>
