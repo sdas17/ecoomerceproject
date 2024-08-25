@@ -1577,7 +1577,7 @@ const About = () => {
           </button>
         }
         {showProfile && (
-          <ProfileClass name={"Bharat Kumar"} location={"Bihar"} />
+          <ProfileClass name={"subham kumar"} location={"Bihar"} />
         )}
       </div>
 
@@ -1621,7 +1621,7 @@ class profileClass extends Component {
     // Initialize the state of the component
     this.state = {
       userInfo: {
-        name: "Bharat Kumar", // default values
+        name: "subham kumar", // default values
         bio: "Java | React.js", // default values
         followers: 5, // default values
         avatar_url:
@@ -1953,7 +1953,7 @@ const Footer = () => {
       Created By
       <span>❤️</span>
       <a className="linkedin-name" href={LINKEDIN_LINK} target="_blank">
-        Bharat Kumar
+        subham kumar
       </a>
       <span>&copy;</span>
       {year}

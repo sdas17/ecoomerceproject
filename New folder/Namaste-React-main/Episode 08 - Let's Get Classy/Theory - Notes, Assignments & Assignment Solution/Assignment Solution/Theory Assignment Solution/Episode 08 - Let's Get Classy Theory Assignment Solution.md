@@ -627,10 +627,10 @@ class About extends React.Component {
             </button>
           }
           {this.state.showUser && (
-            <User name={"Bharat Kumar"} location={"Bihar"} />
+            <User name={"subham kumar"} location={"Bihar"} />
           )}
           {this.state.showUser && (
-            <UserClass name={"Bharat Kumar"} location={"Bihar"} />
+            <UserClass name={"subham kumar"} location={"Bihar"} />
           )}
         </div>
 
@@ -667,8 +667,8 @@ export default About;
 //             {showUser ? "Hide User" : "Show User"}
 //           </button>
 //         }
-//         {showUser && <User name={"Bharat Kumar"} location={"Bihar"} />}
-//         {showUser && <UserClass name={"Bharat Kumar"} location={"Bihar"} />}
+//         {showUser && <User name={"subham kumar"} location={"Bihar"} />}
+//         {showUser && <UserClass name={"subham kumar"} location={"Bihar"} />}
 //       </div>
 
 //       <div className="about">

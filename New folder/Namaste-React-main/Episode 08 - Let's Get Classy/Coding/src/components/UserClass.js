@@ -12,7 +12,7 @@ class UserClass extends Component {
     // Initialize the state of the component
     this.state = {
       userInfo: {
-        name: "Bharat Kumar",
+        name: "subham kumar",
         location: "Bihar, India",
         avatar_url: "https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/01/dummy-profile-pic.jpg",
       }

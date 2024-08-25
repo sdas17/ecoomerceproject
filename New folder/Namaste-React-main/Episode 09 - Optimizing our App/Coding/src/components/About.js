@@ -15,7 +15,7 @@ const About = () => {
             {showProfile ? "Hide My Profile" : "Show My Profile"}
           </button>
         }
-        {showProfile && <ProfileClass name={"Bharat Kumar"} location={"Bihar"} />}
+        {showProfile && <ProfileClass name={"subham kumar"} location={"Bihar"} />}
       </div>
 
       <div className="about">

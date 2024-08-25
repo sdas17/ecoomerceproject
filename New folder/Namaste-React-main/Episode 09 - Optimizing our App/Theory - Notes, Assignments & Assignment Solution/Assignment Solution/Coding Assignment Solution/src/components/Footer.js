@@ -8,7 +8,7 @@ const Footer = () => {
       Created By
       <span>❤️</span>
       <a className="linkedin-name" href={LINKEDIN_LINK} target="_blank">
-        Bharat Kumar
+        subham kumar
       </a>
       <span>&copy;</span>
       {year}

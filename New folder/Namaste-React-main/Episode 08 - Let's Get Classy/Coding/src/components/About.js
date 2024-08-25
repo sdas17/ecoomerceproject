@@ -152,8 +152,8 @@ export default About;
 //               {this.state.showUser ? "Hide User" : "Show User"}
 //             </button>
 //           }
-//           {this.state.showUser && <User name={"Bharat Kumar"} location={"Bihar"} />}
-//           {this.state.showUser && <UserClass name={"Bharat Kumar"} location={"Bihar"} />}
+//           {this.state.showUser && <User name={"subham kumar"} location={"Bihar"} />}
+//           {this.state.showUser && <UserClass name={"subham kumar"} location={"Bihar"} />}
 //         </div>
 
 //         <div className="about">
@@ -207,8 +207,8 @@ export default About;
 //             {showUser ? "Hide User" : "Show User"}
 //           </button>
 //         }
-//         {showUser && <User name={"Bharat Kumar"} location={"Bihar"} />}
-//         {showUser && <UserClass name={"Bharat Kumar"} location={"Bihar"} />}
+//         {showUser && <User name={"subham kumar"} location={"Bihar"} />}
+//         {showUser && <UserClass name={"subham kumar"} location={"Bihar"} />}
 //       </div>
 
 //       <div className="about">

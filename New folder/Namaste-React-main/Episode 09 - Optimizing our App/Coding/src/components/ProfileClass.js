@@ -17,7 +17,7 @@ class profileClass extends Component {
     // Initialize the state of the component
     this.state = {
       userInfo: {
-        name: "Bharat Kumar", // default values
+        name: "subham kumar", // default values
         bio: "Java | React.js", // default values
         followers: 5, // default values
         avatar_url:
