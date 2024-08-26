@@ -12,6 +12,7 @@ const Body = () => {
   const [showTopRated, setShowTopRated] = useState(true);
 
   const isOnline = useOnlineStatus();
+  
   const [listOfRestaurants, filteredRestaurants, setFilteredRestaurants] =
     useRestaurantData();
 
