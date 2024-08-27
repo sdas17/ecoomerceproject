@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Restcard from './Restcard';
+import Restcard ,{withPromotesd} from './RestCard';
 import Shimmer from '../component/Shimmer-ui';
 import {
     SWIGGY_API_URL,
@@ -12,11 +12,16 @@ const Body = () => {
     const [listOfResturant, setListOfResturant] = useState([]);
     const [filterData, setFilterData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    console.log('body render ',listOfResturant);
+    
 
     // Fetch data on component mount
     useEffect(() => {
         fetchData();
     }, []);
+
+    // HOC for RestaurantCard with discount offer
+    const RestaurntCard=withPromotesd(Restcard)
 
     // Fetch restaurant data from API
     const fetchData = async () => {
@@ -65,14 +70,26 @@ const Body = () => {
                 </div>
                 <div className=" flex flex-wrap    ">
                     {filterData.map((restaurant) => (
+                    
+                        
                         <Link key={restaurant?.info?.id} to={"/resturantMenu/" + restaurant?.info?.id}>
-                            <Restcard {...restaurant?.info} />
+
+
+                            {/* here u write here resturant is promiting add promoted level */}
+
+                            {
+                                restaurant?.info.aggregatedDiscountInfoV3 ? <RestaurntCard {...restaurant?.info}/>:  <Restcard {...restaurant?.info} />
+                            }
+                          
+                          
                         </Link>
-                    ))}
+                    ))}                          
+
                 </div>
             </div>
         </>
     );
 };
+
 
 export default Body;

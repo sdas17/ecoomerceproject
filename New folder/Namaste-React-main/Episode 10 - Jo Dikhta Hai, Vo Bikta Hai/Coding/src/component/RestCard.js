@@ -9,7 +9,9 @@ const Restcard = ({
   avgRating,
 }) => {
     console.log(sla);
-    
+
+
+
     return (
         <>
             <div className="m-4 p-4 w-[250px] " style={{ backgroundColor: "#f0f0f0" }}>
@@ -30,5 +32,23 @@ const Restcard = ({
 
         </>
     )
+ 
 }
+export const withPromotesd=()=>{
+    return (props)=>{
+        const { aggregatedDiscountInfoV3 } = props;
+        
+        
+
+        return (
+            <div>
+                <span>{aggregatedDiscountInfoV3.subHeader}</span>
+                <div>{aggregatedDiscountInfoV3.header}</div>
+                <Restcard {...props}/>
+            </div>
+        )
+    }
+}
+
+
 export default Restcard;
