@@ -42,8 +42,7 @@ export const withPromotesd=()=>{
 
         return (
             <div>
-                <span>{aggregatedDiscountInfoV3.subHeader}</span>
-                <div>{aggregatedDiscountInfoV3.header}</div>
+                <label className="absolute bg-black text-white m-2 p-2 rounded-lg">{aggregatedDiscountInfoV3.subHeader} || {aggregatedDiscountInfoV3.header}</label>
                 <Restcard {...props}/>
             </div>
         )
