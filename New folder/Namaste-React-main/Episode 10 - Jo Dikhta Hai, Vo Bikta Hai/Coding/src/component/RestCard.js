@@ -34,15 +34,14 @@ const Restcard = ({
     )
  
 }
+
 export const withPromotesd=()=>{
     return (props)=>{
         const { aggregatedDiscountInfoV3 } = props;
-        
-        
-
+    
         return (
             <div>
-                <label className="absolute bg-black text-white m-2 p-2 rounded-lg">{aggregatedDiscountInfoV3.subHeader} || {aggregatedDiscountInfoV3.header}</label>
+                <label className="absolute bg-black text-white m-3 p-4 rounded-lg">{aggregatedDiscountInfoV3.subHeader} || {aggregatedDiscountInfoV3.header}</label>
                 <Restcard {...props}/>
             </div>
         )
