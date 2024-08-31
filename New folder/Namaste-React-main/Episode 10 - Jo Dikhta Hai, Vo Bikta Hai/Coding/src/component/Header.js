@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlieStatus from "../hooks/UseOnlineStatus.js";
-
+import UseDumy from '../hooks/UseDumy';
 const Header =()=>{
     const [btnNamereact,setBtname]=useState("Login")
     console.log('render');
     const onlineStatus=useOnlieStatus();
+    const  {firstName} = useContext(UseDumy);
+    console.log(firstName);
     
+
     return (
         <>
         <div className='flex justify-between bg-pink-100 shadow-lg ' >
@@ -33,6 +36,7 @@ const Header =()=>{
                              btnNamereact === 'Login' ? setBtname('Logout') : setBtname('Login')
                         })}>{btnNamereact}</button>
                     </li>
+                    <li className="px-4 font-black">{firstName}</li>
                 </ul>
             </div>
         </div>

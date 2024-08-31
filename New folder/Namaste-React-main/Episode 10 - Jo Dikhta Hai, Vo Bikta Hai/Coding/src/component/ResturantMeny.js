@@ -9,13 +9,11 @@ import { MdStarRate } from "react-icons/md";
 import RestaurantCategory from "./RestaurantCategory";
 
 const ResturantMeny = () => {
-  const [expandedItems, setExpandedItems] = useState({});
   const { resId } = useParams();
   const navigate = useNavigate();
 const resInfo =UserCusotomhook(resId);
-
-
-
+//uncontrolled and controlled component 
+const [itemindex,setIndex]=useState(null)
 
   if (!resInfo) return <Shimmer />;
 
@@ -30,20 +28,6 @@ const categories = cards.filter(
     c?.card?.["card"]?.["@type"] ===
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );
-  
-
-  
-
-  
- 
-  
-  
-  
-  
-
-
-
-
   return (
    <>
 <div className="w-[60%] mx-auto my-4">
@@ -91,6 +75,10 @@ const categories = cards.filter(
         <RestaurantCategory
           key={category?.card?.card?.title}
           data={category?.card?.card}
+          showitem={index === itemindex }
+          setIndex={()=>setIndex(index === itemindex ? null : index)}
+
+      
 
         />
       ))}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Restcard ,{withPromotesd} from './RestCard';
 import Shimmer from '../component/Shimmer-ui';
@@ -6,6 +6,7 @@ import {
     SWIGGY_API_URL,
     SWIGGY_REST_API_PATH,
 } from '../hooks/Apicalling';
+import UseDumy from '../hooks/UseDumy';
 
 const Body = () => {
     // State variables
@@ -22,6 +23,7 @@ const Body = () => {
 
     // HOC for RestaurantCard with discount offer
     const RestaurntCard=withPromotesd(Restcard)
+    const {setuserinfo,firstName}=useContext(UseDumy)
 
     // Fetch restaurant data from API
     const fetchData = async () => {
@@ -65,9 +67,11 @@ const Body = () => {
                     <button onClick={handleTopRated} className="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 m-4">
                         Top Rated Restaurants
                     </button>
-
+                    <label>Username:</label>
+                    <input type='text'   placeholder="Username..."  value={firstName}className="border border-black p-2" onChange={(e)=>setuserinfo(e.target.value)}/>
 
                 </div>
+              
                 <div className=" flex flex-wrap    ">
                     {filterData.map((restaurant) => (
                     

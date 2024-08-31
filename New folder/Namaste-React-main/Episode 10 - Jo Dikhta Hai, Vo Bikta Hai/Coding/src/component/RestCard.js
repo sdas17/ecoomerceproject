@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import { IMG_CDN_URL } from "../hooks/Apicalling.js";
+
+import UseDumy from "../hooks/UseDumy.js";
 const Restcard = ({
   cloudinaryImageId,
   name,
@@ -9,7 +12,7 @@ const Restcard = ({
   avgRating,
 }) => {
     console.log(sla);
-
+const {firstName}=useContext(UseDumy);
 
 
     return (
@@ -26,6 +29,7 @@ const Restcard = ({
                 <h4>{sla?.deliveryTime} mins</h4>
                 <h4> {cuisines?.join(", ").slice(0, 30)}
                     {cuisines?.join(", ")?.length > 30 ? "..." : ""}</h4>
+                    <h4>userName:{firstName}</h4>
 
             </div>
 
