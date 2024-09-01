@@ -2,12 +2,21 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlieStatus from "../hooks/UseOnlineStatus.js";
 import UseDumy from '../hooks/UseDumy';
+import { useSelector } from 'react-redux'
+
 const Header =()=>{
     const [btnNamereact,setBtname]=useState("Login")
     console.log('render');
     const onlineStatus=useOnlieStatus();
     const  {firstName} = useContext(UseDumy);
     console.log(firstName);
+    //Subsribe to the store using a select
+    // const cartitems=useSelector((store)=>store.cart.item);
+    const selectedData = useSelector((store)=>store.cart.item);
+    console.log(selectedData);
+    
+    
+
     
 
     return (
@@ -30,7 +39,7 @@ const Header =()=>{
                         </li>
 
                     <li className="px-4">  <Link to="/About">Contact</Link></li>
-                    <li className="px-4"> <Link to="/Cart">Cart</Link></li>
+                    <li className="px-4 font-black text-sm"> <Link to="/Addcart">Cart ({selectedData.length}) item</Link></li>
                     <li style={{paddingLeft:'17px'}}>
                         <button className="btn-style" onClick={(()=>{
                              btnNamereact === 'Login' ? setBtname('Logout') : setBtname('Login')

@@ -1,8 +1,19 @@
+import { useDispatch } from 'react-redux';
+import { addItem } from '../hooks/cartSlice';
+
 import { IMG_CDN_URL } from "../hooks/Apicalling";
-
-
 const Itemlist = ({itemlist})=>{
-    console.log(itemlist);
+    console.log(itemlist,'s');
+    
+    const dispatch =useDispatch();
+    console.log(dispatch);
+    
+
+    const addWishlist = (item) => {
+        console.log('click',item);
+        // dispatch(addItem("pizza"));
+        dispatch(addItem(item))
+      };
     
     return (
         <div>
@@ -23,7 +34,8 @@ const Itemlist = ({itemlist})=>{
                             <div className="w-3/12 p-4">
                         
                                 <div className="absolute">
-                                <button className="p-2 mx-7 rounded-lg bg-white color-white shadow-lg   ">Add+</button>
+                                <button className="p-2 mx-7 rounded-lg bg-white color-white shadow-lg   "      onClick={() => addWishlist(item)}
+                                >Add+</button>
 
                                 </div>
                                 <img

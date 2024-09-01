@@ -9,8 +9,9 @@ import {
 import About from './component/About';
 import Error from './component/Error/Error.js';
 import Body from './component/Body';
-import ResturantMeny from './component/ResturantMeny';
+import AddCart from './component/AddCart.js';
 
+import ResturantMeny from './component/ResturantMeny';
  const Groceery =lazy(()=>import("../src/component/Groceery"))
 const router = createBrowserRouter([
   {
@@ -27,13 +28,18 @@ const router = createBrowserRouter([
       
       },
       {
+        path:"/Addcart",
+        element:<AddCart/>
+      },
+      {
         path:"/resturantMenu/:resId",
         element:<ResturantMeny/>
       },{
         path:"/grocery",
         element:<Suspense fallback={<h1>Loading .....</h1>}><Groceery />
 </Suspense>
-      }
+      },
+     
     ],
     errorElement:<Error/>
    
