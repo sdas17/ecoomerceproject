@@ -9,11 +9,12 @@ import { MdStarRate } from "react-icons/md";
 import RestaurantCategory from "./RestaurantCategory";
 
 const ResturantMeny = () => {
+  const [expandedItems, setExpandedItems] = useState(null);
   const { resId } = useParams();
-  const navigate = useNavigate();
 const resInfo =UserCusotomhook(resId);
-//uncontrolled and controlled component 
-const [itemindex,setIndex]=useState(null)
+
+
+
 
   if (!resInfo) return <Shimmer />;
 
@@ -28,6 +29,9 @@ const categories = cards.filter(
     c?.card?.["card"]?.["@type"] ===
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );
+  
+
+
   return (
    <>
 <div className="w-[60%] mx-auto my-4">
@@ -71,15 +75,12 @@ const categories = cards.filter(
                   {categories.map((category, index) => (
                     console.log(category),
                     
-        // Controlled Component
+        // Controlled Component and uncontrolled component  here we using expand and collpase fetatre
         <RestaurantCategory
           key={category?.card?.card?.title}
           data={category?.card?.card}
-          showitem={index === itemindex }
-          setIndex={()=>setIndex(index === itemindex ? null : index)}
-
-      
-
+          showitem={index ===expandedItems ? true:false}
+          setExpandedItems={()=>setExpandedItems(index)}
         />
       ))}
 

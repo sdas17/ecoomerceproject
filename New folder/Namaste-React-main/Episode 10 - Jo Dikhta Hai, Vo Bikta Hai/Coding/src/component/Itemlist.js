@@ -39,7 +39,7 @@ const Itemlist = ({itemlist})=>{
 
                                 </div>
                                 <img
-                                    className=" object-cover rounded-[8px]"
+                                    className=" object-cover rounded-[8px] "
                                     src={IMG_CDN_URL + item.card.info.imageId}
                                     alt={name}
                                 />

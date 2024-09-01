@@ -1,18 +1,14 @@
 
 import { useState } from "react";
 import Itemlist from "./Itemlist";
-const RestaurantCategory = ({data,showitem,setIndex} ) => {
-    console.log(showitem,setIndex,'3');
-    // const [showitem,useshowitem]=useState(false)
-
-    
- 
+const RestaurantCategory = ({data,showitem,setExpandedItems} ) => {
+    console.log(data,'3');
+    // const [showitem,useshowitem]=useState("false")
 
     const handleClick= ()=>{
+      console.log();
       // useshowitem(!showitem)
-      // setShowitem();
-      setIndex((prev)=>(prev === showitem ? null : showitem));
-      
+      setExpandedItems()
     }
   return (
     <div>
@@ -22,7 +18,7 @@ const RestaurantCategory = ({data,showitem,setIndex} ) => {
   <span>⬇️</span>
   </div>
      
-  {/* body item list    if showitem is present then show item*/}
+  {/* body item list  */}
          {showitem && <Itemlist itemlist ={data.itemCards}/> }  
     </div>
     </div>

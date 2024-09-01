@@ -6,6 +6,12 @@ const cartSlice=createSlice({
         item:[]
     },
     reducers:{
+
+        //older version redux concept
+        //vanilla(older) Redux =>Dont' mutate state
+        //const newState=[...state];
+        //newState.items.push(action.payload)
+        //return newstate
         //mutating
         addItem:(state,action)=>{
             state.item.push(action.payload);
