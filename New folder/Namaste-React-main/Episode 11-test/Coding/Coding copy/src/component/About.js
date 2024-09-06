@@ -1,7 +1,7 @@
 import React from 'react';
 import UseDumy from '../hooks/UseDumy';
 import UserClass from './UserClass';
-
+import Contact from '../component/Contact';
 class About extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +21,7 @@ class About extends React.Component {
           }
         </UseDumy.Consumer>
         <UserClass name={'Vasu (class)'} location={'Badvel class'}/>
+        <Contact/>
 
       </div>
     );
